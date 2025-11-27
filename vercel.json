@@ -1,0 +1,18 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "public": "public",
+
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.5.0"
+    }
+  },
+
+  "rewrites": [
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/contact/", "destination": "/contact.html" },
+    { "source": "/contact.html", "destination": "/contact.html" }
+  ]
+}
